@@ -12,7 +12,7 @@ public class DemoQaTests {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = config.browser();
+        Configuration.browser = config.BrowserName();
     }
 
     @Test

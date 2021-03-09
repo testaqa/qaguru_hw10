@@ -2,5 +2,7 @@ import org.aeonbits.owner.Config;
 
 public interface TestConfig extends Config {
 
-    String browser();
+    @Key("browser")
+    @DefaultValue("chrome")
+    String BrowserName();
 }
