@@ -1,6 +1,6 @@
-public class TestConfig {
+import org.aeonbits.owner.Config;
 
-    public String Browser(){
-        return System.getProperty("browser", "chrome");
-    }
+public interface TestConfig extends Config {
+
+    String browser();
 }

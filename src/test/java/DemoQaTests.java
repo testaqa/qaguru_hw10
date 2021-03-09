@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -7,11 +8,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class DemoQaTests {
-    final static TestConfig config = new TestConfig();
+    final static TestConfig config = ConfigFactory.create(TestConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = config.Browser();
+        Configuration.browser = config.browser();
     }
 
     @Test
