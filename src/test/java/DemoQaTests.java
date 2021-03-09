@@ -6,6 +6,11 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class DemoQaTests {
 
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.browser = System.getProperty("browser", "chrome");
+    }
+
     @Test
     void SubmitForm() {
         open("https://demoqa.com/automation-practice-form");
