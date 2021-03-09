@@ -8,6 +8,9 @@ public interface WebdriverConfig extends Config {
     @DefaultValue("chrome")
     String BrowserName();
 
+    @Key("browser.version")
+    String browserVersion();
+
     @Key("webdriver.url")
     String webdriverUrl();
 }

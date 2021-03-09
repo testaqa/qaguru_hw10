@@ -17,6 +17,8 @@ public class DemoQaTests {
 
         if (System.getProperty("webdriver").equals("remote")) {
             Configuration.remote = config.webdriverUrl();
+            Configuration.browserVersion = config.browserVersion();
+
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
