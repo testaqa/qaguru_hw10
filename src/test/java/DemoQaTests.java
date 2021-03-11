@@ -27,12 +27,10 @@ public class DemoQaTests {
     }
 
     @Test
-    void SubmitForm() throws InterruptedException {
+    void submitForm() {
         open("https://demoqa.com/automation-practice-form");
 
         $("h5").shouldHave(text("Student Registration Form"));
-
-        Thread.sleep(5000);
     }
 
 }
